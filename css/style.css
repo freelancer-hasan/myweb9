@@ -1,0 +1,339 @@
+/* ----------- Global Style ------------ */
+
+html{
+	scroll-behavior: smooth;
+}
+#loading{
+	width: 100%;
+	height: 100vh;
+	z-index: 99999;
+	background: #fff url('https://miro.medium.com/max/1600/1*CsJ05WEGfunYMLGfsT2sXA.gif') no-repeat center;
+	position: fixed;
+
+}
+a.up-arrow-button {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: red;
+    bottom: 40px;
+    right: 30px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 49px;
+    color: white;
+    font-size: 22px;
+    border-radius: 50%;
+}
+a.up-arrow-button:hover{
+	color: #f6f7b0;
+}
+.container {
+    max-width: 1290px;
+}
+body{
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+	background-color: var(--rgb-white);
+	color: var(--rgb-black);
+}
+body.dark-theme{
+	--rgb-black:white;
+	--rgb-white:black;
+	--navbar-back:#43adad;
+}
+.inner-shadow{
+	box-shadow: var(--inner-shadow);
+}
+.outer-shadow{
+	box-shadow: var(--outer-shadow);
+}
+:root{
+	--main-color:#ff4f3b;
+	--box-color:#3bff89;
+	--rgb-black:black;
+	--rgb-white:white;
+	--navbar-back:#fdfdfd;
+	--inner-shadow:inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
+	--outer-shadow:3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
+}
+
+
+/* ----------- all design ------- */
+
+/* ----------- navbar design area start ----------- */
+
+a.navbar-brand{
+	font-size: 28px;
+}
+button.navbar-toggler {
+    outline: none;
+}
+button.navbar-toggler i{
+    color: var(--rgb-black);
+}
+.navbar{
+	border-bottom: 1px solid var(--box-color);
+	background-color: var(--navbar-back);
+    opacity: 0.9;
+}
+.navbar img {
+    width: 50px;
+}
+#navbarNav ul li{
+	margin-left: 10px;
+}
+#navbarNav ul li a{
+	font-size: 25px;
+	color: var(--rgb-black);
+}
+#navbarNav ul li a:hover{
+	color: var(--main-color);
+	transition: 0.3s;
+}
+
+/* ----------- navbar design area end ----------- */
+
+/* -------------- showcase area design start */
+
+section#showcase{
+	height: 74vh;
+    padding-top: 10rem;
+    padding-bottom: 25rem;
+}
+#showcase img {
+    width: 250px;
+    border-radius: 50%;
+    box-shadow: rgb(213 255 202) 0px -2px 17px;
+    cursor: pointer;
+}
+
+
+#showcase .person{
+	text-align: center;
+}
+#showcase h1{
+	font-size: 60px;
+	color: var(--main-color);
+}
+#showcase span{
+	font-size: 2rem;
+	color: var(--box-color);
+}
+#showcase p{
+	font-size: 20px;
+}
+/* -------------- showcase area design end ---------------- */
+/* -------------- about area design start ---------------- */
+section#about-info p.about-info-p, section#services-section p.about-info-p, section#my-portfolio p.portfolio-info-p, section#contact-info p.contact-info-p{
+	color: var(--box-color);
+}
+section#about-info .about-cont{
+    text-align: left;
+
+}
+section#about-info img{
+    padding: 15px;
+    border: 1px solid var(--box-color);
+    width: 300px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.about-cont button{
+    padding: 8px;
+    border-radius: 30px;
+    background-color: var(--rgb-white);
+    outline: none !important;
+    color: var(--box-color);
+    border: 1px solid var(--box-color);
+    cursor: pointer;
+    font-weight: 500;
+    transition: .3s;
+}
+.about-cont button:hover{
+	color: var(--main-color);
+}
+.social a{
+	text-decoration: none;
+	margin:6px ; 
+}
+.social i {
+    font-size: 21px;
+    padding: 10px;
+    border-radius: 50%;
+    margin-top: 9px;
+    transition: 0.3s;
+    color: var(--rgb-black);
+}
+.social i:hover{
+    color: var(--main-color);
+    box-shadow: var(--inner-shadow);
+}
+/* ---------- about area design end ----------- */
+
+/* ---------- services area design start ----------- */
+section#services-section {
+    padding-top: 80px;
+}
+section#services-section i{
+	font-size: 30px;
+	cursor: pointer;
+}
+section#services-section p.p-text{
+	font-size: 20px;
+}
+.service-con {
+    position: relative;
+    background: var(--rgb-white);
+}
+
+.service-con:before {
+content: "";
+position: absolute;
+top: -2px;
+left: -2px;
+background: linear-gradient(45deg, #fb0094, #0000ff,#00ff00,#ffff00,#ff0000,#fb0094, #0000ff,#00ff00,#ffff00,#ff0000);
+width: calc(100% + 4px);
+height: calc(100% + 4px);
+background-size: 400%;
+border-radius: 5px;
+z-index: -1;
+animation: boxshadow 20s linear infinite;
+}
+
+.service-con:after {
+    filter: blur(20px);
+}
+
+@keyframes boxshadow{
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 100% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
+
+.service-con {
+    border-radius: 5px;
+    padding: 15px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.service-con i:hover {
+    box-shadow: var(--outer-shadow);
+    transition: 0.3s;
+}
+section#services-section i {
+    font-size: 30px;
+    padding: 10px 15px 10px 15px;
+    border-radius: 50%;
+}
+section#services-section i:hover{
+	color: var(--box-color);
+	transition: .3s;
+}
+/* ---------- services area design end ----------- */
+/* ---------- porfolio area design start ----------- */
+
+section#my-portfolio a{
+	text-decoration: none;
+}
+.portfolio-box{
+    position: relative;
+    background-color: var(--rgb-white)
+}
+.portfolio-box:before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background: linear-gradient(45deg,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000,#fb0094, #0000ff,#00ff00,#ffff00,#ff0000);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    background-size: 400%;
+    z-index: -1;
+    border-radius: 5px;
+    animation: boxshadow 20s linear infinite;
+}
+.portfolio-box:after {
+    filter: blur(20px);
+}
+.portfolio-con {
+    padding: 15px;
+    padding-bottom: 0px;
+}
+.portfolio-con img {
+    border-radius: 10px;
+}
+.portfolio-con p {
+    color: var(--rgb-black);
+    font-size: 20px;
+    text-align: left;
+    padding-top: 2px;
+    padding-bottom: 12px;
+}
+.portfolio-con p:hover{
+	color: var(--main-color);
+}
+/* ---------- porfolio area design end ----------- */
+/* ---------- contact area design start ----------- */
+.contact-card {
+    background-color: var(--rgb-white);
+    border: 1px solid var(--box-color);
+}
+.contact-card button:hover{
+    background-color: var(--main-color);
+    color: black;
+}
+.contact-card button{
+    background-color: var(--rgb-black);
+    color: var(--rgb-white) !important;
+}
+.card.contact-info-add {
+    background-color: var(--rgb-white);
+    border: 1px solid var(--box-color);
+}
+/* ---------- contact area design end ----------- */
+/* ---------- footer area design start ----------- */
+footer{
+	border-top: 1px solid var(--main-color);
+}
+footer span{
+	color: white;
+}
+/* ---------- footer area design end ----------- */
+/* ---------- media query --------- */
+@media(max-width: 768px){
+	.navbar ul{
+		text-align: center;
+	}
+}
+@media(max-width: 768px){
+	#showcase .myname{
+		text-align: center !important;
+	}
+	section#about-info {
+    margin-top: 200px;
+	}
+	.about-cont{
+		padding: 36px
+	}
+}
+@media(max-width: 992px){
+	.about-cont{
+		padding: 38px;
+	}
+}
+@media(max-width: 380px){
+	#showcase h1 {
+    font-size: 50px;
+	}
+	#showcase span{
+		font-size: 25px;
+	}
+}
